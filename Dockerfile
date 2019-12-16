@@ -16,7 +16,7 @@ RUN echo "mariadb-server-10.3 mariadb-server/root_password_again password root12
 RUN echo "mariadb-server-10.3 mariadb-server/root_password seen true" | debconf-set-selections
 RUN echo "mariadb-server-10.3 mariadb-server/root_password_again seen true" | debconf-set-selections
 
-RUN apt-get install -y supervisor apache2 php7.3 php7.3-gd php7.3-xml php7.3-intl php7.3-sqlite mariadb-server-10.3 smbclient curl libcurl4 php7.3-mysql php7.3-curl bzip2 wget vim openssl ssl-cert sharutils
+RUN apt-get install -y supervisor apache2 php7.3 php7.3-gd php7.3-xml php7.3-intl php7.3-sqlite mariadb-server-10.3 smbclient curl libcurl4 php7.3-mysql php7.3-curl php7.3-zip php7.3-mb bzip2 wget vim openssl ssl-cert sharutils
 
 RUN wget -q -O - http://download.owncloud.org/community/owncloud-latest.tar.bz2 | tar jx -C /var/www/;chown -R www-data:www-data /var/www/owncloud
 
